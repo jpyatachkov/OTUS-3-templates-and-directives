@@ -8,9 +8,9 @@ const sendRequest = () => {
 };
 </script>
 
-<template>
+<template> 
 <form @submit.prevent="sendRequest">
-    <input placeholder="query" :value="query" @input="query = $event.target.value"/>
+    <input placeholder="query" v-model="query"/>
     <button type="submit">Отправить</button>
 </form>
 </template>

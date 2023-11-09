@@ -6,6 +6,8 @@ const props = defineProps({
     input2: String,
 });
 
+const emit = defineEmits(['update:input1', 'update:input2']);
+
 const input1 = computed({
     get() {
         return props.input1
@@ -23,11 +25,9 @@ const input2 = computed({
         emit('update:input2', value)
     }
 });
-
-const emit = defineEmits(['update:input1', 'update:input2']);
 </script>
 
 <template>
-    <input :value="input1" @input="input1 = $event.target.value"/>
-    <input :value="input2" @input="input2 = $event.target.value"/>
+    <input v-model="input1"/>
+    <input v-model="input2"/>
 </template>

@@ -14,9 +14,11 @@ const increment = () => {
 <span v-if="counter === 0">
 Счетчик обнулен
 </span>
+
 <span v-else-if="counter < 3">
 Счетчик не добрался до трех
 </span>
+
 <span v-else>
 Счетчик больше или равен трем
 </span>

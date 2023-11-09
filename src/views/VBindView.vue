@@ -2,14 +2,20 @@
 import {ref} from 'vue';
 import MultipleBind from '../components/MultipleBind.vue';
 
-const input = ref('');
-const input1 = ref('');
+const input = ref('ksnflkgnd');
+
+
+
+
+const input1 = ref('qw');
 const input2 = ref('');
 
 </script>
 
 <template>
 <h3>Input имеет значение {{ input }}</h3>
+
+<input placeholder="Без v-model" v-bind:value="input" v-on:input="input = $event.target.value"/>
 <input placeholder="Без v-model" :value="input" @input="input = $event.target.value"/>
 <input placeholder="С v-model" v-model="input"/>
 
